@@ -7,5 +7,19 @@
 // В іншому випадку, якщо введений пароль який збігається зі значенням константи ADMIN_PASSWORD, записати в message рядок 'Ласкаво просимо!'
 // В іншому випадку, тобто якщо жодна з попередніх умов не виконалася, записати в message рядок 'Доступ заборонений, невірний пароль!'
 // Після всіх перевірок вивести в alert значення змінної message.
-// const ADMIN_PASSWORD = 'jqueryismyjam';
-// let message;
+const ADMIN_PASSWORD = "jqueryismyjam";
+let message;
+const password = prompt(
+  "Введіть пароль"
+);
+if (password === null) {
+  message = "Скасовано користувачем!";
+} else if (
+  password === ADMIN_PASSWORD
+) {
+  message = "Ласкаво просимо!";
+} else {
+  message =
+    "Доступ заборонений, невірний пароль!";
+}
+alert(message);

@@ -1,0 +1,41 @@
+[33mcommit 1fd389c9447fd710794ccd1aea897901fe013010[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: Alexander Drapoy <dr4alex@gmail.com>
+Date:   Tue May 17 19:43:14 2022 +0300
+
+    ч
+
+[1mdiff --git a/.vscode/settings.json b/.vscode/settings.json[m
+[1mnew file mode 100644[m
+[1mindex 0000000..6b665aa[m
+[1m--- /dev/null[m
+[1m+++ b/.vscode/settings.json[m
+[36m@@ -0,0 +1,3 @@[m
+[32m+[m[32m{[m
+[32m+[m[32m  "liveServer.settings.port": 5501[m
+[32m+[m[32m}[m
+[1mdiff --git a/js/task_03.js b/js/task_03.js[m
+[1mindex be559f1..f7903b2 100644[m
+[1m--- a/js/task_03.js[m
+[1m+++ b/js/task_03.js[m
+[36m@@ -7,5 +7,19 @@[m
+ // В іншому випадку, якщо введений пароль який збігається зі значенням константи ADMIN_PASSWORD, записати в message рядок 'Ласкаво просимо!'[m
+ // В іншому випадку, тобто якщо жодна з попередніх умов не виконалася, записати в message рядок 'Доступ заборонений, невірний пароль!'[m
+ // Після всіх перевірок вивести в alert значення змінної message.[m
+[31m-// const ADMIN_PASSWORD = 'jqueryismyjam';[m
+[31m-// let message;[m
+[32m+[m[32mconst ADMIN_PASSWORD = "jqueryismyjam";[m
+[32m+[m[32mlet message;[m
+[32m+[m[32mconst password = prompt([m
+[32m+[m[32m  "Введіть пароль"[m
+[32m+[m[32m);[m
+[32m+[m[32mif (password === null) {[m
+[32m+[m[32m  message = "Скасовано користувачем!";[m
+[32m+[m[32m} else if ([m
+[32m+[m[32m  password === ADMIN_PASSWORD[m
+[32m+[m[32m) {[m
+[32m+[m[32m  message = "Ласкаво просимо!";[m
+[32m+[m[32m} else {[m
+[32m+[m[32m  message =[m
+[32m+[m[32m    "Доступ заборонений, невірний пароль!";[m
+[32m+[m[32m}[m
+[32m+[m[32malert(message);[m
